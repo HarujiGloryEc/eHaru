@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(java -version)",
+      "PowerShell(mvn -version 2>&1)",
+      "PowerShell(node -version)",
+      "PowerShell(npm -version)",
+      "PowerShell([System.Environment]::GetEnvironmentVariable\\(\"JAVA_HOME\", \"Machine\"\\); [System.Environment]::GetEnvironmentVariable\\(\"JAVA_HOME\", \"User\"\\); [System.Environment]::GetEnvironmentVariable\\(\"NVM_HOME\", \"Machine\"\\); [System.Environment]::GetEnvironmentVariable\\(\"NVM_HOME\", \"User\"\\))",
+      "PowerShell($env:JAVA_HOME = \"I:\\\\jdk\\\\ms-21.0.11\"; $env:PATH = \"$env:JAVA_HOME\\\\bin;$env:PATH\"; java -version)",
+      "PowerShell($env:NVM_HOME = \"I:\\\\vm\"; $env:NVM_SYMLINK = \"I:\\\\vm\\\\shared\"; $env:PATH = \"$env:NVM_HOME;$env:NVM_SYMLINK;$env:PATH\"; node -version; npm -version)",
+      "PowerShell(& \"I:\\\\vm\\\\nvm.exe\" list)",
+      "PowerShell(\\(Get-Item \"I:\\\\nvm4w\"\\).GetFiles\\(\\) | Select-Object Name; \\(Get-Item \"I:\\\\nvm4w\"\\).GetDirectories\\(\\) | Select-Object Name)",
+      "PowerShell($env:JAVA_HOME = \"I:\\\\jdk\\\\ms-21.0.11\"; $env:MAVEN_HOME = \"I:\\\\maven\\\\apache-maven-3.8.5\"; $env:PATH = \"$env:JAVA_HOME\\\\bin;$env:MAVEN_HOME\\\\bin;$env:PATH\"; mvn -version)",
+      "PowerShell($env:NVM_HOME = \"I:\\\\vm\"; $env:PATH = \"$env:NVM_HOME;$env:PATH\"; & \"I:\\\\vm\\\\nvm.exe\" install 20)",
+      "PowerShell($env:NVM_HOME = \"I:\\\\vm\"; $env:PATH = \"$env:NVM_HOME;$env:PATH\"; & \"I:\\\\vm\\\\nvm.exe\" use 20.20.2)",
+      "PowerShell(Test-Path \"I:\\\\nvm4w\\\\nodejs\"; \\(Get-Item \"I:\\\\nvm4w\\\\nodejs\" -ErrorAction SilentlyContinue\\).Attributes)",
+      "PowerShell($env:JAVA_HOME = \"I:\\\\jdk\\\\ms-21.0.11\"; $env:MAVEN_HOME = \"I:\\\\maven\\\\apache-maven-3.8.5\"; $nodePath = \"I:\\\\vm\\\\v20.20.2\"; $env:PATH = \"$env:JAVA_HOME\\\\bin;$env:MAVEN_HOME\\\\bin;$nodePath;$env:PATH\"; node -version; npm -version)",
+      "PowerShell($env:JAVA_HOME = \"I:\\\\jdk\\\\ms-21.0.11\"; $env:MAVEN_HOME = \"I:\\\\maven\\\\apache-maven-3.8.5\"; $nodePath = \"I:\\\\vm\\\\v20.20.2\"; $env:PATH = \"$env:JAVA_HOME\\\\bin;$env:MAVEN_HOME\\\\bin;$nodePath;$env:PATH\"; node --version; npm --version)",
+      "PowerShell($env:JAVA_HOME = \"I:\\\\jdk\\\\ms-21.0.11\"; $env:MAVEN_HOME = \"I:\\\\maven\\\\apache-maven-3.8.5\"; $env:PATH = \"$env:JAVA_HOME\\\\bin;$env:MAVEN_HOME\\\\bin;$env:PATH\"; Set-Location \"h:\\\\work\\\\haru-shop\\\\work\\\\ecosystem\\\\backend\"; mvn test -pl shop-api 2>&1)",
+      "PowerShell(Test-Path \"$env:USERPROFILE\\\\.m2\\\\repository\\\\org\\\\springframework\\\\boot\\\\spring-boot-starter-parent\\\\3.3.5\")",
+      "PowerShell(Get-ChildItem \"$env:USERPROFILE\\\\.m2\\\\repository\\\\org\\\\springframework\\\\boot\\\\spring-boot-starter-parent\\\\3.3.5\" | Select-Object Name)",
+      "PowerShell($env:JAVA_HOME = \"I:\\\\jdk\\\\ms-21.0.11\"; $env:MAVEN_HOME = \"I:\\\\maven\\\\apache-maven-3.8.5\"; $env:PATH = \"$env:JAVA_HOME\\\\bin;$env:MAVEN_HOME\\\\bin;$env:PATH\"; Set-Location \"h:\\\\work\\\\haru-shop\\\\work\\\\ecosystem\\\\backend\"; mvn test -pl shop-api \"-Djavax.net.ssl.trustStoreType=Windows-ROOT\" 2>&1 | Select-Object -Last 20)",
+      "PowerShell($env:JAVA_HOME = \"I:\\\\jdk\\\\ms-21.0.11\"; $env:MAVEN_HOME = \"I:\\\\maven\\\\apache-maven-3.8.5\"; $env:PATH = \"$env:JAVA_HOME\\\\bin;$env:MAVEN_HOME\\\\bin;$env:PATH\"; Set-Location \"h:\\\\work\\\\haru-shop\\\\work\\\\ecosystem\\\\backend\"; mvn verify -pl shop-api \"-Djavax.net.ssl.trustStoreType=Windows-ROOT\" 2>&1 | Select-Object -Last 30)",
+      "PowerShell($nodePath = \"I:\\\\vm\\\\v20.20.2\"; $env:PATH = \"$nodePath;$env:PATH\"; Set-Location \"h:\\\\work\\\\haru-shop\\\\work\\\\ecosystem\\\\frontend\"; npm install 2>&1 | Select-Object -Last 10)",
+      "PowerShell(Get-Command git -ErrorAction SilentlyContinue; \\(Get-Command git -ErrorAction SilentlyContinue\\).Source; where.exe git 2>$null)",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\Git\\\\bin\" -ErrorAction SilentlyContinue | Select-Object Name; Get-ChildItem \"C:\\\\Program Files \\(x86\\)\\\\Git\\\\bin\" -ErrorAction SilentlyContinue | Select-Object Name; [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) -split \";\" | Where-Object { $_ -match \"git\" })",
+      "PowerShell($env:PATH = \"I:\\\\Git\\\\cmd;$env:PATH\"; git --version)",
+      "PowerShell($env:PATH = \"I:\\\\Git\\\\cmd;$env:PATH\"; Set-Location \"h:\\\\work\\\\haru-shop\\\\work\"; git init; git remote add origin https://github.com/HarujiGloryEc/eHaru.git)",
+      "PowerShell($env:PATH = \"I:\\\\Git\\\\cmd;$env:PATH\"; Set-Location \"h:\\\\work\\\\haru-shop\\\\work\"; git remote -v)",
+      "PowerShell($env:PATH = \"I:\\\\Git\\\\cmd;$env:PATH\"; Set-Location \"h:\\\\work\\\\haru-shop\\\\work\"; git checkout -b phase-1; git add .; git status --short | Select-Object -First 40)"
+    ]
+  }
+}

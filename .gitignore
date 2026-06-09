@@ -1,0 +1,46 @@
+# Maven
+ecosystem/backend/**/target/
+ecosystem/backend/**/.mvn/wrapper/maven-wrapper.jar
+!ecosystem/backend/**/src/
+
+# Node / npm
+ecosystem/frontend/node_modules/
+ecosystem/frontend/dist/
+ecosystem/frontend/.vite/
+ecosystem/frontend/coverage/
+
+# Cypress
+ecosystem/frontend/cypress/screenshots/
+ecosystem/frontend/cypress/videos/
+ecosystem/frontend/cypress/downloads/
+
+# Java
+*.class
+*.jar
+!ecosystem/backend/**/src/
+*.war
+
+# Logs
+*.log
+logs/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment
+.env.local
+.env.*.local
+
+# Docker volumes (never commit data)
+postgres_data/
+redis_data/
+kafka_data/

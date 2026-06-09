@@ -1,0 +1,17 @@
+{
+  "realm": "haru-shop",
+  "enabled": true,
+  "displayName": "Haru Shop",
+  "sslRequired": "none",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "roles": {
+    "realm": [
+      { "name": "merchant", "description": "Store merchant role" },
+      { "name": "customer", "description": "Customer role" },
+      { "name": "admin", "description": "Platform admin role" }
+    ]
+  },
+  "clients": []
+}

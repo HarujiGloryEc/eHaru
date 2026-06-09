@@ -1,0 +1,5 @@
+akhq:
+  connections:
+    haru-kafka:
+      properties:
+        bootstrap.servers: "kafka:29092"
