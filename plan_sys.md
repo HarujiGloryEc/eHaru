@@ -1,7 +1,9 @@
 # Shopify Store Platform - plan.md
 
 # Rules
-
+* eco.yml is only for running, not for building.
+* Each phase has its own run.cmd and must be run separately before execution.
+* Use phase names instead of numbers.
 * Use subagent-driven-development
 * One subagent per checkbox task
 * Follow RED → GREEN → REFACTOR TDD cycle
@@ -120,7 +122,7 @@ Payment
 
 ---
 
-# Phase 1 - Backend & Frontend Foundation
+# Phase Foundation - Backend & Frontend Foundation
 
 ## Backend Foundation
 
@@ -196,7 +198,7 @@ Payment
 
 ---
 
-# Phase 2 - Core Ecommerce Domain
+# Phase core - Core Ecommerce Domain
 
 ## User Domain
 
@@ -269,7 +271,7 @@ Payment
 
 ---
 
-# Phase 3 - Authentication & Multi-Tenant Security
+# Phase Auth - Authentication & Multi-Tenant Security
 
 ## Spring Security
 
@@ -323,7 +325,7 @@ Payment
 
 ---
 
-# Phase 4 - Commerce Flow
+# Phase commerce - Commerce Flow
 
 ## Cart Domain
 
@@ -391,7 +393,7 @@ Payment
 
 ---
 
-# Phase 5 - Inventory & Real-Time
+# Phase Inventory - Inventory & Real-Time
 
 ## Inventory
 
@@ -428,7 +430,7 @@ Payment
 
 ---
 
-# Phase 6 - Observability
+# Phase Observe - Observability
 
 ## Metrics
 
@@ -466,7 +468,7 @@ Payment
 
 ---
 
-# Phase 7 - Gateway & Infrastructure
+# Phase infas - Gateway & Infrastructure
 
 ## Kong
 
@@ -506,7 +508,7 @@ Payment
 
 ---
 
-# Phase 8 - CI/CD Pipeline
+# Phase Pipeline - CI/CD Pipeline
 
 ## Jenkins Pipeline
 
@@ -585,7 +587,7 @@ Payment
 
 ---
 
-# Phase 9 - Final Hardening
+# Phase harden- Final Hardening
 
 * [ ] Run full integration testing
 * [ ] Run security testing
