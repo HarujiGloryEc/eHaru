@@ -34,6 +34,17 @@ class GlobalExceptionHandlerTest {
     }
 
     @Test
+    void illegalArgumentException_returns400WithApiError() throws Exception {
+        when(healthService.getStatus())
+            .thenThrow(new IllegalArgumentException("duplicate resource"));
+
+        mockMvc.perform(get("/api/v1/health"))
+            .andExpect(status().isBadRequest())
+            .andExpect(jsonPath("$.code").value("BAD_REQUEST"))
+            .andExpect(jsonPath("$.timestamp").exists());
+    }
+
+    @Test
     void genericException_returns500WithApiError() throws Exception {
         when(healthService.getStatus())
             .thenThrow(new RuntimeException("unexpected error"));

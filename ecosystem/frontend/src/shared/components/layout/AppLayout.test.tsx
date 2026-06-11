@@ -26,8 +26,11 @@ describe('AppLayout', () => {
     expect(screen.getByText('Haru Shop')).toBeInTheDocument();
   });
 
-  it('renders the Dashboard nav item', () => {
+  it('renders all nav items', () => {
     renderWithProviders(<AppLayout />);
     expect(screen.getByText('Dashboard')).toBeInTheDocument();
+    expect(screen.getByText('Stores')).toBeInTheDocument();
+    expect(screen.getByText('Categories')).toBeInTheDocument();
+    expect(screen.getByText('Products')).toBeInTheDocument();
   });
 });
